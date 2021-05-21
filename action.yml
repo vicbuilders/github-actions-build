@@ -9,7 +9,9 @@ runs:
   using: "composite"
   steps:    
     - name: SonarQube scan
+      shell: bash
       run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar
 
     - name: MVN Package
+      shell: bash
       run: mvn -B package --file pom.xml -DskipTests
