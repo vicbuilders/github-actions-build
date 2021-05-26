@@ -1,17 +1,13 @@
-name: GitHub actions scan and build application
+name: GitHub actions build application
 author: Gabriel Ferreira <gabriel.oliveira@platformbuilders.io>
-description: GitHub action used to get git repository informations
+description: GitHub action used to build aplications
 branding:
   icon: feather
   color: gray-dark
 
 runs:
   using: "composite"
-  steps:    
-    - name: SonarQube scan
-      shell: bash
-      run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar
-
+  steps:
     - name: MVN Package
       shell: bash
       run: mvn -B package --file pom.xml -DskipTests
