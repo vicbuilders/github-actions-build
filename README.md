@@ -26,4 +26,4 @@ If you wants to update or make changes in module code you should use the **devel
       - name: MVN Package
         uses: platformbuilders/github-actions-build@develop
 ```
-After execute all tests you can open a pull request to the master branch. 
+After execute all tests you can open a pull request to the master branch.
